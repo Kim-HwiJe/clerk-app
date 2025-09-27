@@ -30,7 +30,7 @@ export default function Header() {
             </SignedOut>
             <SignedIn>
               <Link
-                href="/dashboard-s"
+                href="/dashboard"
                 className="text-gray-300 hover:text-white mr-4"
               >
                 Dashboard-S
