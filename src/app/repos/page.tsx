@@ -14,6 +14,19 @@ export default async function ReposPage() {
       },
     }
   )
+  //1. SSG : static site generation
+  // export default async function ReposPage() {
+  // const response = await fetch(
+  // `https://api.github.com/users/${username}/repos`)
+  //2. SSR : Server-side- rendering
+  //export default async function ReposPage() {
+  //  const response = await fetch(
+  //    `https://api.github.com/users/${username}/repos`,
+  //     {cache: 'no-store'} )
+  // 3. ISR : Incremental Static Generation
+  //  const response = await fetch(
+  //    `https://api.github.com/users/${username}/repos`,
+  //     {next : {revalidate: 60} } )
 
   await new Promise((resolve) => setTimeout(resolve, 1000))
   const repos = await response.json()
